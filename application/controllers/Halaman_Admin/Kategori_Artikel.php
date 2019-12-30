@@ -28,7 +28,7 @@ class Kategori_Artikel extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('kategori_artikel/kategori_artikel_list', $data);
+		$this->load->view('Halaman_Admin/kategori_artikel/kategori_artikel_list', $data);
 		$this->load->view('layout_admin/footer', $data);
 	}
 
@@ -52,7 +52,7 @@ class Kategori_Artikel extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('kategori_artikel/kategori_artikel_form', $data);
+		$this->load->view('Halaman_Admin/kategori_artikel/kategori_artikel_form', $data);
 		$this->load->view('layout_admin/footer', $data);
 	}
 
@@ -109,7 +109,7 @@ class Kategori_Artikel extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('kategori_artikel/kategori_artikel_form', $data);
+    		$this->load->view('Halaman_Admin/kategori_artikel/kategori_artikel_form', $data);
     		$this->load->view('layout_admin/footer', $data);
     	} else {
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');

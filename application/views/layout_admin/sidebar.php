@@ -33,23 +33,23 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/User')?>"><i class="fa fa-circle-o "></i> Data User</a></li>
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/User/projectMaker') ?>"><i class="fa fa-circle-o "></i> Project Maker</a></li>
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/User/projectMaker') ?>"><i class="fa fa-circle-o "></i> Pemilik Usaha</a></li>
                     <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/User/Donatur') ?>"><i class="fa fa-circle-o "></i> Donatur</a></li>             
                 </ul>
             </li>
             <li class="treeview <?php echo ($this->uri->segment(1) == 'master1' || $this->uri->segment(1) == 'master2' || $this->uri->segment(1) == 'master3') ? 'active open' : ''; ?>">
                 <a href="#">
-                    <i class="glyphicon glyphicon-user"></i> <span>Project</span>
+                    <i class="glyphicon glyphicon-user"></i> <span>UMKM</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project')?>"><i class="fa fa-circle-o "></i> Semua Project</a></li>
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/siapApprove')?>"><i class="fa fa-circle-o "></i> Project Siap Approve</a></li>
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectBerjalan')?>"><i class="fa fa-circle-o "></i> Project Berjalan</a></li>
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectSelesai')?>"><i class="fa fa-circle-o "></i> Project Selesai</a></li>
-                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectDitolak')?>"><i class="fa fa-circle-o "></i> Project Ditolak</a></li>                
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project')?>"><i class="fa fa-circle-o "></i> Semua UMKM</a></li>
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/siapApprove')?>"><i class="fa fa-circle-o "></i> UMKM Siap Approve</a></li>
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectBerjalan')?>"><i class="fa fa-circle-o "></i> UMKM Berjalan</a></li>
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectSelesai')?>"><i class="fa fa-circle-o "></i> UMKM Selesai</a></li>
+                    <li class="<?php echo ($this->uri->segment(1) == 'user') ? 'active' : ''; ?>"><a href="<?= site_url('Halaman_Admin/Project/projectDitolak')?>"><i class="fa fa-circle-o "></i> UMKM Ditolak</a></li>                
                 </ul>
             </li>
             <li class="treeview <?php echo ($this->uri->segment(1) == 'master1' || $this->uri->segment(1) == 'master2' || $this->uri->segment(1) == 'master3') ? 'active open' : ''; ?>">

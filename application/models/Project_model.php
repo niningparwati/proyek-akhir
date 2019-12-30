@@ -117,6 +117,11 @@ class Project_model extends CI_Model
         return $this->db->get($this->table)->result();
     }
 
+    public function request($data)
+    {
+        $this->db->insert('request', $data);
+    }
+
     //----------------------- END PROJECT DITOLAK -------------------------
 
     //================================================ END ADMIN ===============================================
@@ -228,6 +233,41 @@ class Project_model extends CI_Model
         $this->db->where('benefit.isi IS NOT NULL', NULL, FALSE );
         $this->db->where('project.id_project', $id);
         return $this->db->get($this->table)->row();
+    }
+
+    public function countSiapApprove()
+    {
+        return $this->db->query("SELECT COUNT(id_project) as jumlah FROM project WHERE status='pending'")->row();
+    }
+
+    public function countBerjalan()
+    {
+        return $this->db->query("SELECT COUNT(id_project) as jumlah FROM project WHERE status='berjalan'")->row();
+    }
+
+    public function countSelesai()
+    {
+        return $this->db->query("SELECT COUNT(id_project) as jumlah FROM project WHERE status='selesai'")->row();
+    }
+
+    public function countTolak()
+    {
+        return $this->db->query("SELECT COUNT(id_project) as jumlah FROM project WHERE status='tolak'")->row();
+    }
+
+    public function countUser()
+    {
+        return $this->db->query("SELECT COUNT(id_user) as jumlah FROM user")->row();
+    }
+
+    public function countPemilikUsaha()
+    {
+        return $this->db->query("SELECT COUNT(DISTINCT project.id_user) as jumlah FROM project JOIN user ON project.id_user=user.id_user ORDER BY project.id_user LIMIT 1")->row();
+    }
+
+    public function countDonatur()
+    {
+        return $this->db->query("SELECT COUNT(DISTINCT donasi.id_user) as jumlah FROM donasi JOIN user ON donasi.id_user=user.id_user ORDER BY donasi.id_user LIMIT 1")->row();
     }
 
     //------------------------------------ END CREATE PROJECT ---------------------------------------

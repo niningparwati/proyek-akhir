@@ -90,6 +90,11 @@ class Artikel_model extends CI_Model
 
     //================================================ USER ============================================
 
+    function get_data_artikel()
+    {
+        return $this->db->query("SELECT artikel.*, kategori_artikel.* FROM artikel JOIN kategori_artikel ON artikel.id_kategori=kategori_artikel.id_kategori")->result();
+    }
+
     function total_rows($q = NULL) //sudah
     { 
         $this->db->like('id_artikel', $q);

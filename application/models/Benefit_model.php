@@ -55,6 +55,11 @@ class Benefit_model extends CI_Model
 		$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();
     }
+    
+     public function data_benefit($id)
+    {
+        return $this->db->query("select * from benefit where id_project='$id'")->result();
+    }
 
     // insert data
     function insert($data)

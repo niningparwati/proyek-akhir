@@ -5,13 +5,12 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Detail Project Maker
+          Detail Pemilik Usaha
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-          <li><a href="#">User</a></li>
-          <li class="active">Project Maker</li>
-          <li class="active">Detail Project Maker</li>
+          <li><a href="#">Pemilik Usaha</a></li>
+          <li class="active">Detail Pemilik Usaha</li>
         </ol>
       </section>
 
@@ -22,7 +21,7 @@
             <div class="box box-success">
               <div class="box-header">
                 <div class="box-tools pull-right">
-                  <button type="button" class="toggle-expand-btn btn btn-default btn-sm"><i class="fa fa-expand"></i></button>
+                  
                 </div>
               </div>
               <div class="box-body">

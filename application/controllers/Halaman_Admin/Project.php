@@ -34,7 +34,7 @@ class Project extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('project/project_list', $data);
+		$this->load->view('Halaman_Admin/project/project_list', $data);
 		$this->load->view('layout_admin/footer', $data);
 	}
 
@@ -77,7 +77,7 @@ class Project extends CI_Controller {
     	$this->load->view('layout_admin/head');
     	$this->load->view('layout_admin/header', $data);
     	$this->load->view('layout_admin/sidebar', $data);
-    	$this->load->view('project/project_siap_acc', $data);
+    	$this->load->view('Halaman_Admin/project/project_siap_acc', $data);
     	$this->load->view('layout_admin/footer', $data);
     }
 
@@ -113,7 +113,7 @@ class Project extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('project/project_siap_acc_read', $data);
+    		$this->load->view('Halaman_Admin/project/project_siap_acc_read', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -173,7 +173,7 @@ class Project extends CI_Controller {
     	$this->load->view('layout_admin/head');
     	$this->load->view('layout_admin/header', $data);
     	$this->load->view('layout_admin/sidebar', $data);
-    	$this->load->view('project/project_berjalan', $data);
+    	$this->load->view('Halaman_Admin/project/project_berjalan', $data);
     	$this->load->view('layout_admin/footer', $data);
     }
 
@@ -213,7 +213,7 @@ class Project extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('project/project_berjalan_read', $data);
+    		$this->load->view('Halaman_Admin/project/project_berjalan_read', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -241,7 +241,7 @@ class Project extends CI_Controller {
     	$this->load->view('layout_admin/head');
     	$this->load->view('layout_admin/header', $data);
     	$this->load->view('layout_admin/sidebar', $data);
-    	$this->load->view('project/project_selesai', $data);
+    	$this->load->view('Halaman_Admin/project/project_selesai', $data);
     	$this->load->view('layout_admin/footer', $data);
 
     }
@@ -280,7 +280,7 @@ class Project extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('project/project_selesai_read', $data);
+    		$this->load->view('Halaman_Admin/project/project_selesai_read', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -309,7 +309,7 @@ class Project extends CI_Controller {
     	$this->load->view('layout_admin/head');
     	$this->load->view('layout_admin/header', $data);
     	$this->load->view('layout_admin/sidebar', $data);
-    	$this->load->view('project/project_ditolak', $data);
+    	$this->load->view('Halaman_Admin/project/project_ditolak', $data);
     	$this->load->view('layout_admin/footer', $data);
     }
 
@@ -345,7 +345,7 @@ class Project extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('project/project_ditolak_read', $data);
+    		$this->load->view('Halaman_Admin/project/project_ditolak_read', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -384,8 +384,41 @@ class Project extends CI_Controller {
         }
     }
 
-    //---------------------------- END DOWNLOAD --------------------------------
+    //------------------------------ END DOWNLOAD -------------------------------
 
+    //--------------------------------- REQUEST ---------------------------------
+
+    public function Request($id_project)
+    {
+        $email = $this->session->userdata('email');
+        $cekAdmin = $this->Admin_model->cekNama($email);
+        $data = array(
+            'logo' => 'assets/images/uproject.png',
+            'email_admin' => $email,
+            'nama_admin' => $cekAdmin->nama_admin,
+            'id_admin' => $cekAdmin->id_admin,
+            'foto_admin' => $cekAdmin->foto_admin,
+            'logout' => base_url('index.php/Halaman_Admin/Dashboard/Logout'),
+            'id_project' => $id_project
+        );
+        $this->load->view('layout_admin/head');
+        $this->load->view('layout_admin/header', $data);
+        $this->load->view('layout_admin/sidebar', $data);
+        $this->load->view('Halaman_Admin/project/request', $data);
+        $this->load->view('layout_admin/footer', $data);
+    }
+
+    public function actionRequest($id_project)
+    {
+        $data = array(
+            'jenis_request' => $this->input->post('jenis_request'),
+            'id_project' => $id_project
+        );
+
+        $this->Project_model->request($data);
+        $this->session->set_flashdata('success', 'Project Berhasil Ditolak');
+        redirect(site_url('Halaman_Admin/Project/siapApprove'));
+    }
 }
 
 ?>

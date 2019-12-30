@@ -30,7 +30,7 @@ class Artikel extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('artikel/artikel_list', $data);
+		$this->load->view('Halaman_Admin/artikel/artikel_list', $data);
 		$this->load->view('layout_admin/footer', $data);
 	}
 
@@ -60,7 +60,7 @@ class Artikel extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('artikel/artikel_form', $data);
+		$this->load->view('Halaman_Admin/artikel/artikel_form', $data);
 		$this->load->view('layout_admin/footer', $data);
 
     }

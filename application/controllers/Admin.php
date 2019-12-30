@@ -72,7 +72,7 @@ class Admin extends CI_Controller
         $email = $this->input->post('email',TRUE);
         $password= md5($this->input->post('password',TRUE));
 
-        $cek = $this->Admin_model->cek_by_email($email);
+        $cek = $this->Admin_model->cek_by_email($email, $password);
         if($cek->email == $email && $password != NULL){
             $pass=$cek->password;
             if (md5($password,$pass)) { 

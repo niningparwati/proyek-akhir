@@ -27,9 +27,10 @@ class Admin_model extends CI_Model
     }
 
     // cek account by email
-    function cek_by_email($id) // FIX
+    function cek_by_email($email, $password) // FIX
     {
-        $this->db->where('email', $id);
+        $this->db->where('email', $email);
+        $this->db->where('password', $password);
         return $this->db->get($this->table)->row();
     }
 

@@ -29,9 +29,8 @@ class Tanggapan_User extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('tanggapan_user/tanggapan_user_list', $data);
+		$this->load->view('Halaman_Admin/tanggapan_user/tanggapan_user_list', $data);
 		$this->load->view('layout_admin/footer', $data);
-
 	}
 
 	public function delete($id) 

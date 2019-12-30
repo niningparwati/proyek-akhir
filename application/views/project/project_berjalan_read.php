@@ -5,13 +5,13 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-            Detail Project Berjalan
+            Detail UMKM Berjalan
       </h1>
       <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-          <li><a href="#">Project</a></li>
-          <li class="active">Project Berjalan</li>
-          <li class="active">Detail Project Berjalan</li>
+          <li><a href="#">UMKM</a></li>
+          <li class="active">UMKM Berjalan</li>
+          <li class="active">Detail UMKM Berjalan</li>
       </ol>
   </section>
 

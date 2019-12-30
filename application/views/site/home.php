@@ -54,7 +54,7 @@
             foreach ($data_project as $value) { ?>
               <div class="col-lg-3 col-md-4">
                 <div class="product">
-                  <div class="image"><a href="<?= site_url('project/detail_project/'.$value->id_project)?>" ><img src="<?= base_url()?>assets/foto_project/<?= $value->foto ?>" alt="" class="img-fluid image1"></a></div>
+                  <div class="image"><a href="<?= site_url('project/detail_project/'.$value->id_project)?>" ><img src="<?= base_url()?>assets/foto_project/<?= $value->foto ?>" alt="" class="img-fluid image1" style="width: 250px; height: 250px"></a></div>
                   <div class="text" style="">
                     <h3><?= $value->nama?></h3>
                       <table style="font-size: 12px; text-align: left;">

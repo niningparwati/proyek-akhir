@@ -31,7 +31,7 @@ class User extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('user/data_user', $data);
+		$this->load->view('Halaman_Admin/user/data_user', $data);
 		$this->load->view('layout_admin/footer', $data);
 	}
 
@@ -63,7 +63,7 @@ class User extends CI_Controller {
 			$this->load->view('layout_admin/head');
 			$this->load->view('layout_admin/header', $data);
 			$this->load->view('layout_admin/sidebar', $data);
-			$this->load->view('user/user_detail', $data);
+			$this->load->view('Halaman_Admin/user/user_detail', $data);
 			$this->load->view('layout_admin/footer', $data);
 		}else{
 			$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -99,7 +99,7 @@ class User extends CI_Controller {
 			$this->load->view('layout_admin/head');
 			$this->load->view('layout_admin/header', $data);
 			$this->load->view('layout_admin/sidebar', $data);
-			$this->load->view('user/user_edit', $data);
+			$this->load->view('Halaman_Admin/user/user_edit', $data);
 			$this->load->view('layout_admin/footer', $data);
 		}else{
 			$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -206,7 +206,7 @@ class User extends CI_Controller {
 		$this->load->view('layout_admin/head');
 		$this->load->view('layout_admin/header', $data);
 		$this->load->view('layout_admin/sidebar', $data);
-		$this->load->view('user/project_maker', $data);
+		$this->load->view('Halaman_Admin/user/project_maker', $data);
 		$this->load->view('layout_admin/footer', $data);
 
 	}
@@ -240,7 +240,7 @@ class User extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('user/project_maker_detail', $data);
+    		$this->load->view('Halaman_Admin/user/project_maker_detail', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');
@@ -265,7 +265,7 @@ class User extends CI_Controller {
     	$this->load->view('layout_admin/head');
     	$this->load->view('layout_admin/header', $data);
     	$this->load->view('layout_admin/sidebar', $data);
-    	$this->load->view('user/donatur', $data);
+    	$this->load->view('Halaman_Admin/user/donatur', $data);
     	$this->load->view('layout_admin/footer', $data);
 
     }
@@ -299,7 +299,7 @@ class User extends CI_Controller {
     		$this->load->view('layout_admin/head');
     		$this->load->view('layout_admin/header', $data);
     		$this->load->view('layout_admin/sidebar', $data);
-    		$this->load->view('user/detail_donatur', $data);
+    		$this->load->view('Halaman_Admin/user/detail_donatur', $data);
     		$this->load->view('layout_admin/footer', $data);
     	}else{
     		$this->session->set_flashdata('error', 'Data Tidak Ditemukan');

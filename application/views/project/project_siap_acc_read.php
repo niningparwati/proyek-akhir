@@ -5,13 +5,13 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Detail Project Siap Approve
+          Detail UMKM Siap Approve
       </h1>
       <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-          <li><a href="#">Project</a></li>
-          <li class="active">Project Siap Approve</li>
-          <li class="active">Detail Project Siap Approve</li>
+          <li><a href="#">UMKM</a></li>
+          <li class="active">UMKM Siap Approve</li>
+          <li class="active">Detail UMKM Siap Approve</li>
       </ol>
   </section>
 
